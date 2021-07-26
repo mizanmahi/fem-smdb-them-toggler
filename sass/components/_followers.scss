@@ -1,0 +1,131 @@
+@use "../abstract/variable";
+
+.followers {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.5rem;
+  &-card {
+    background: var(--d-dark-desaturated-blue);
+    height: 22rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .followers-counts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        font-size: 5.5rem;
+        color: var(--d-white-text);
+      }
+
+      span {
+        font-size: 1.2rem;
+        letter-spacing: 5px;
+        color: var(--d-desaturated-blue-text);
+        text-transform: uppercase;
+      }
+    }
+
+    .todays-count {
+      font-size: 1.2rem;
+      font-weight: 700;
+      span {
+        color: var(--limeGreen);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          padding-top: 8px;
+          padding-right: 0.5rem;
+        }
+      }
+    }
+
+    .social-icon-card-1,
+    .social-icon-card-2,
+    .social-icon-card-3,
+    .social-icon-card-4 {
+      display: flex;
+      align-items: center;
+      i {
+        font-size: 2.4rem;
+        margin-right: 0.8rem;
+      }
+
+      span {
+        color: var(--d-desaturated-blue-text);
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+    }
+
+    .social-icon-card-1 {
+      i {
+        color: var(--facebook);
+      }
+    }
+
+    .social-icon-card-2 {
+      i {
+        color: var(--twitter);
+      }
+    }
+    .social-icon-card-3 {
+      i {
+        display: inline-block;
+        color: transparent;
+        background-image: linear-gradient(to right, var(--instagram1), var(--instagram2));
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+    }
+    .social-icon-card-4 {
+      i {
+        color: var(--youtube);
+      }
+    }
+  }
+
+  .card-1 {
+    border-top: 5px solid var(--facebook);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .card-2 {
+    border-top: 5px solid var(--twitter);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .card-3 {
+    // border-top: 5px solid;
+    // border-image: linear-gradient(to right, var(--instagram1), var(--instagram2)) 1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 5px;
+      width: 100%;
+      background-image: linear-gradient(to right, var(--instagram1), var(--instagram2));
+    }
+  }
+  .card-4 {
+    border-top: 5px solid var(--youtube);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
