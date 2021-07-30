@@ -1,11 +1,18 @@
-@use "../abstract/variable";
+@use "../abstract/variable" as *;
+@use "../abstract/mixins" as *;
 
 .followers {
   width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 1.5rem;
+  grid-template-columns: repeat(4,  1fr);
+  grid-gap: 1.5rem;
+  justify-content: center;
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   &-card {
     background: var(--d-dark-desaturated-blue);
     height: 22rem;
@@ -14,6 +21,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    border-radius: 5px;
 
     .followers-counts {
       display: flex;
@@ -96,19 +104,13 @@
 
   .card-1 {
     border-top: 5px solid var(--facebook);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+   
   }
   .card-2 {
     border-top: 5px solid var(--twitter);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    
   }
   .card-3 {
-    // border-top: 5px solid;
-    // border-image: linear-gradient(to right, var(--instagram1), var(--instagram2)) 1;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     position: relative;
     overflow: hidden;
 
@@ -125,7 +127,5 @@
   }
   .card-4 {
     border-top: 5px solid var(--youtube);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
   }
 }

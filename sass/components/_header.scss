@@ -1,8 +1,10 @@
 @use "../abstract/variable";
 
 header {
-  width: 110rem;
+  max-width: 110rem;
+  width: 100%;
   height: 14rem;
+  padding: 0 2rem;
   // background: var(--d-bg-dark-blue-top);
 
   display: flex;
@@ -13,7 +15,7 @@ header {
 
     &__title {
       color: var(--d-white-text);
-      font-size: 2.2rem;
+      font-size: 2.8rem;
     }
     &__text {
       color: var(--d-desaturated-blue-text);

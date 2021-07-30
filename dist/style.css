@@ -21,8 +21,9 @@ body {
 }
 
 main {
-  width: 1100px;
-  margin: 0 auto;
+  max-width: 110rem;
+  width: 100%;
+  padding: 0 2rem;
 }
 
 :root {
@@ -48,16 +49,28 @@ main {
   --l-dark-blue-text: hsl(230, 17%, 14%);
 }
 
+/*
+Possible breakpoints
+1 phone <= 600px
+2 tab-port <= 900px
+3 tab-land <= 1200
+4 [1200-1800] for the general desktop
+5 big-desktop >= 1800
+Its better to use em in media queries
+1em = 16px
+*/
 header {
-  width: 110rem;
+  max-width: 110rem;
+  width: 100%;
   height: 14rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 header .heading__title {
   color: var(--d-white-text);
-  font-size: 2.2rem;
+  font-size: 2.8rem;
 }
 header .heading__text {
   color: var(--d-desaturated-blue-text);
@@ -76,7 +89,13 @@ header .toggle__btn {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 1.5rem;
+  grid-gap: 1.5rem;
+  justify-content: center;
+}
+@media (max-width: 71.875em) {
+  .followers {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .followers-card {
   background: var(--d-dark-desaturated-blue);
@@ -85,6 +104,7 @@ header .toggle__btn {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  border-radius: 5px;
 }
 .followers-card .followers-counts {
   display: flex;
@@ -155,17 +175,11 @@ header .toggle__btn {
 }
 .followers .card-1 {
   border-top: 5px solid var(--facebook);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 .followers .card-2 {
   border-top: 5px solid var(--twitter);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 .followers .card-3 {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   position: relative;
   overflow: hidden;
 }
@@ -181,8 +195,25 @@ header .toggle__btn {
 }
 .followers .card-4 {
   border-top: 5px solid var(--youtube);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+}
+
+.overview {
+  margin-top: 5rem;
+}
+.overview-title {
+  color: var(--d-white-text);
+  font-size: 2.5rem;
+  margin-bottom: 4.25rem;
+}
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 12.5rem);
+  grid-gap: 1.5rem;
+}
+.overview-cards-card {
+  background: var(--d-dark-desaturated-blue);
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
