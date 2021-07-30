@@ -1,13 +1,6 @@
-# Avoid accidental Sketch file upload 
-###############################################
-## Please do not remove line 5 - thanks! 🙂 ##
-###############################################
+
 *.sketch
 
-# Avoid accidental XD or Figma upload if you convert the design file
-#######################################################
-## Please do not remove lines 11 and 12 - thanks! 🙂 ##
-#######################################################
 *.xd
 *.fig
 
@@ -15,6 +8,3 @@
 .DS_Store
 
 node_modules
-content.md
-style-guide.md
-design

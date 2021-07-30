@@ -43,6 +43,9 @@ main {
   --d-dark-desaturated-blue: hsl(228, 28%, 20%);
   --d-desaturated-blue-text: hsl(228, 34%, 66%);
   --d-white-text: hsl(0, 0%, 100%);
+  --d-hover-bg: hsl(228, 26%, 27%, 1);
+  --d-toggle-shadow: 0 0 10px hsl(210, 78%, 56%);
+  --d-grayish-blue-text: hsl(228, 12%, 44%);
 }
 
 [data-theme=light] {
@@ -51,6 +54,8 @@ main {
   --d-white-text: hsl(230, 17%, 14%);
   --d-dark-desaturated-blue: hsl(227, 47%, 96%);
   --d-desaturated-blue-text: hsl(228, 12%, 44%);
+  --d-hover-bg: hsl(232, 33%, 91%, 1);
+  --d-toggle-shadow: 0 5px 20px hsl(228, 12%, 44%, .5);
 }
 
 header {
@@ -88,13 +93,10 @@ header .header-container .heading__text {
   color: var(--d-desaturated-blue-text);
   font-weight: 700;
 }
-header .header-container .toggle__btn {
-  padding: 1.2rem 4.5rem;
-  color: #fff;
-  border: 0;
-  background: var(--d-bg-dark-blue-top);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
+@media (max-width: 62em) {
+  header .header-container .heading__text {
+    padding-bottom: 2rem;
+  }
 }
 
 .followers {
@@ -108,7 +110,7 @@ header .header-container .toggle__btn {
 @media (max-width: 62em) {
   .followers {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: -70px;
+    margin-top: -50px;
   }
 }
 @media (max-width: 31.25em) {
@@ -126,6 +128,10 @@ header .header-container .toggle__btn {
   justify-content: space-around;
   border-radius: 5px;
   transition: all 0.3s linear;
+  cursor: pointer;
+}
+.followers-card:hover, .followers-card:active {
+  background: var(--d-hover-bg);
 }
 .followers-card .followers-counts {
   display: flex;
@@ -237,7 +243,7 @@ header .header-container .toggle__btn {
 .overview-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 12.5rem);
+  grid-template-rows: repeat(2, 12.5rem);
   grid-gap: 2rem;
 }
 @media (max-width: 62em) {
@@ -259,6 +265,10 @@ header .header-container .toggle__btn {
   align-items: center;
   justify-content: space-between;
   transition: all 0.3s linear;
+  cursor: pointer;
+}
+.overview-cards-card:hover, .overview-cards-card:active {
+  background: var(--d-hover-bg);
 }
 .overview-cards-card-top {
   width: 100%;
@@ -327,6 +337,7 @@ header .header-container .toggle__btn {
   .toggle-container {
     padding: 2rem 0;
     justify-content: space-between;
+    border-top: 1px solid var(--d-desaturated-blue-text);
   }
 }
 .toggle-container span {
@@ -339,6 +350,9 @@ header .header-container .toggle__btn {
   position: relative;
   height: 33px;
   width: 56px;
+}
+.toggle-container .toggle-switch:hover .slider {
+  box-shadow: var(--d-toggle-shadow);
 }
 .toggle-container input {
   display: none;
@@ -368,6 +382,22 @@ header .header-container .toggle__btn {
   position: absolute;
   border-radius: 50%;
   transition: 0.3s linear;
+}
+
+footer {
+  text-align: center;
+  margin-top: 5rem;
+  color: var(--d-grayish-blue-text);
+}
+footer a {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--dark-toggle1);
+  font-weight: 700;
+}
+footer a:hover {
+  transform: rotate(5deg) scale(1.2) translateX(5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /*# sourceMappingURL=style.css.map */

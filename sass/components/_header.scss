@@ -35,16 +35,10 @@ header {
       &__text {
         color: var(--d-desaturated-blue-text);
         font-weight: 700;
+        @include respond(tab-land) {
+          padding-bottom: 2rem;
+        }
       }
-    }
-
-    .toggle__btn {
-      padding: 1.2rem 4.5rem;
-      color: #fff;
-      border: 0;
-      background: var(--d-bg-dark-blue-top);
-      box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.5);
-      border-radius: 20px;
     }
   }
 }
