@@ -6,7 +6,7 @@
 
   display: grid;
   grid-template-columns: repeat(4,  1fr);
-  grid-gap: 1.5rem;
+  grid-gap: 2rem;
   justify-content: center;
 
   @include respond(tab-land) {
@@ -56,6 +56,16 @@
         i {
           padding-top: 8px;
           padding-right: 0.5rem;
+        }
+      }
+
+      .count-down {
+        color: var(--brightRed);
+
+        i {
+          transform: rotate(180deg);
+          padding-left: 0.5rem;
+          padding-top: 4px;
         }
       }
     }
