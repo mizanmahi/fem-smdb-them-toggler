@@ -30,18 +30,24 @@
       <link rel="stylesheet" href="dist/style.css" />
 
       <!-- javascript -->
-      <script defer src="dist/style.css"></script>
+      <script defer src="dist/main.js"></script>
 
       <title>Social Media Dashboard</title>
    </head>
    <body>
       <header>
-         <div class="heading">
-            <h2 class="heading__title">Social Media Dashboard</h2>
-            <p class="heading__text">Total Followers: 23,004</p>
-         </div>
-         <div class="toggle">
-            <button class="toggle__btn">On</button>
+         <div class="header-container">
+            <div class="heading">
+               <h2 class="heading__title">Social Media Dashboard</h2>
+               <p class="heading__text">Total Followers: 23,004</p>
+            </div>
+            <div class="toggle-container">
+               <span>Dark Mode</span>
+               <label class="toggle-switch" for="toggle-checkbox">
+                  <input type="checkbox" id="toggle-checkbox" />
+                  <div class="slider"></div>
+               </label>
+            </div>
          </div>
       </header>
 
@@ -104,7 +110,9 @@
                </div>
 
                <div class="todays-count">
-                  <span class="count-down"><i class="fas fa-sort-up"></i> 144 Today</span>
+                  <span class="count-down"
+                     ><i class="fas fa-sort-up"></i> 144 Today</span
+                  >
                </div>
             </div>
          </section>

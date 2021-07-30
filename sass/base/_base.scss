@@ -19,10 +19,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  transition: all 0.3s linear;
 }
 
 main {
-  max-width: 110rem;
+  max-width: 115rem;
   width: 100%;
   padding: 0 2rem;
 }

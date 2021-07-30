@@ -3,18 +3,20 @@
 
 .followers {
   width: 100%;
-
+  margin-top: -100px;
   display: grid;
-  grid-template-columns: repeat(4,  1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
   justify-content: center;
 
   @include respond(tab-land) {
     grid-template-columns: repeat(2, 1fr);
+    margin-top: -70px;
   }
-  @include respond (phone) {
+  @include respond(phone) {
     grid-template-columns: 1fr;
-    }
+    margin-top: -70px;
+  }
 
   &-card {
     background: var(--d-dark-desaturated-blue);
@@ -25,6 +27,7 @@
     align-items: center;
     justify-content: space-around;
     border-radius: 5px;
+    transition: all 0.3s linear;
 
     .followers-counts {
       display: flex;
@@ -117,11 +120,9 @@
 
   .card-1 {
     border-top: 5px solid var(--facebook);
-   
   }
   .card-2 {
     border-top: 5px solid var(--twitter);
-    
   }
   .card-3 {
     position: relative;

@@ -1,34 +1,50 @@
 @use "../abstract/variable";
+@use "../abstract/mixins" as *;
 
 header {
-  max-width: 110rem;
   width: 100%;
-  height: 14rem;
-  padding: 0 2rem;
-  // background: var(--d-bg-dark-blue-top);
-
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--d-bg-dark-blue-top);
+  height: 25rem;
+  transition: all 0.3s linear;
 
-  .heading {
+  .header-container {
+    max-width: 115rem;
+    width: 100%;
+    padding: 5rem 2rem;
 
-    &__title {
-      color: var(--d-white-text);
-      font-size: 2.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include respond(tab-land) {
+      display: block;
     }
-    &__text {
-      color: var(--d-desaturated-blue-text);
-      font-weight: 700;
-    }
-  }
 
-  .toggle__btn {
-    padding: 1.2rem 4.5rem;
-    color: #fff;
-    border: 0;
-    background: var(--d-bg-dark-blue-top);
-    box-shadow: 0 10px 20px rgba($color: #000000, $alpha: .5);
-    border-radius: 20px;
+    .heading {
+      &__title {
+        color: var(--d-white-text);
+        font-size: 2.8rem;
+
+        @include respond(phone) {
+          font-size: 2rem;
+        }
+      }
+      &__text {
+        color: var(--d-desaturated-blue-text);
+        font-weight: 700;
+      }
+    }
+
+    .toggle__btn {
+      padding: 1.2rem 4.5rem;
+      color: #fff;
+      border: 0;
+      background: var(--d-bg-dark-blue-top);
+      box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.5);
+      border-radius: 20px;
+    }
   }
 }
