@@ -13,15 +13,17 @@ Its better to use em in media queries
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media (max-width: 37.5em) {
+    @media (max-width: 29.68em) {
       @content;
     } // 600 / 16 = 37.5em
+      // 475 / 16 = 18.75em
   }
 
   @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) {
+    @media (max-width: 62em) {
       @content;
     } // 900 / 16 = 56.25em
+      // 992 / 16 = 62em
   }
 
   @if $breakpoint == tab-land {

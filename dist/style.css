@@ -97,6 +97,11 @@ header .toggle__btn {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media (max-width: 29.68em) {
+  .followers {
+    grid-template-columns: 1fr;
+  }
+}
 .followers-card {
   background: var(--d-dark-desaturated-blue);
   height: 22rem;
@@ -211,9 +216,82 @@ header .toggle__btn {
   grid-template-rows: repeat(4, 12.5rem);
   grid-gap: 1.5rem;
 }
+@media (max-width: 62em) {
+  .overview-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 29.68em) {
+  .overview-cards {
+    grid-template-columns: 1fr;
+  }
+}
 .overview-cards-card {
   background: var(--d-dark-desaturated-blue);
   border-radius: 5px;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.overview-cards-card-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.overview-cards-card-top p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--d-desaturated-blue-text);
+}
+.overview-cards-card-top i {
+  font-size: 2.4rem;
+}
+.overview-cards-card-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.overview-cards-card-bottom h2 {
+  font-size: 3.2rem;
+  color: var(--d-white-text);
+}
+.overview-cards-card-bottom span {
+  color: var(--limeGreen);
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overview-cards-card-bottom span i {
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+}
+.overview-cards-card-bottom .count-down {
+  color: var(--brightRed);
+}
+.overview-cards-card-bottom .count-down i {
+  transform: rotate(180deg);
+  padding-left: 0.5rem;
+}
+.overview-cards .overview-card-1 .social-icon, .overview-cards .overview-card-2 .social-icon {
+  color: var(--facebook);
+}
+.overview-cards .overview-card-3 .social-icon, .overview-cards .overview-card-4 .social-icon {
+  display: inline-block;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--instagram1), var(--instagram2));
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.overview-cards .overview-card-5 .social-icon, .overview-cards .overview-card-6 .social-icon {
+  color: var(--twitter);
+}
+.overview-cards .overview-card-7 .social-icon, .overview-cards .overview-card-8 .social-icon {
+  color: var(--youtube);
 }
 
 /*# sourceMappingURL=style.css.map */
