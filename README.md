@@ -4,6 +4,10 @@
 
 This is a solution to the [Social media dashboard with theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H).
 
+### Links
+
+- Live Site URL: [fem-smd](https://mizanmahi.github.io/fem-smdb-theme-toggler/)
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -14,9 +18,6 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
   - [What I learned](#what-i-learned)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
-## Overview
 
 ### The challenge
 
@@ -30,13 +31,6 @@ Users should be able to:
 ### Screenshot
 
 <img src="https://i.ibb.co/Z1BN7gm/Screenshot.png" alt="Screenshot" border="0">
-
-
-### Links
-
-- Live Site URL: [Add live site URL here](https://mizanmahi.github.io/fem-smdb-theme-toggler/)
-
-## My process
 
 ### Built with
 
@@ -54,5 +48,5 @@ I have learned so many new things of css and javascript, specially using the css
 
 ## Author
 
-- Website - [Mizan Mahi](https://www.linkedin.com/in/mizan-mahi/)
+- Linkedin - [Mizan Mahi](https://www.linkedin.com/in/mizan-mahi/)
 - Facebook - [Mizan Mahi](https://www.facebook.com/mizanmahi.10/)
